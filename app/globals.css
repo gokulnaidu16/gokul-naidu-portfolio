@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: #070b14; }
+body { margin: 0; background: #070b14; color: #dce6ff; }
+::selection { background: rgba(111, 140, 255, .45); color: white; }
+
+@layer utilities {
+  .text-gradient { background: linear-gradient(105deg, #dce7ff 4%, #93a9ff 48%, #87e7e1); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .eyebrow { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: .69rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: #8c9cbb; }
+  .button-primary { display: inline-flex; align-items: center; gap: .55rem; border: 1px solid rgba(172, 193, 255, .24); background: linear-gradient(135deg, #7088f4, #6672de); padding: .78rem 1.12rem; font-size: .875rem; font-weight: 600; color: white; transition: transform .25s ease, box-shadow .25s ease, background .25s ease; }
+  .button-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(75, 95, 215, .28); background: linear-gradient(135deg, #7d92f8, #6d7ae8); }
+  .button-secondary { display: inline-flex; align-items: center; gap: .55rem; border: 1px solid rgba(219, 231, 255, .16); background: rgba(255,255,255,.035); padding: .78rem 1.12rem; font-size: .875rem; font-weight: 500; color: #dfe8ff; transition: transform .25s ease, border-color .25s ease, background .25s ease; }
+  .button-secondary:hover { transform: translateY(-2px); border-color: rgba(219, 231, 255, .32); background: rgba(255,255,255,.08); }
+}
+
+/* CSS animations for visual effects — replaces Framer Motion infinite loops for performance */
+@keyframes orbit-cw { to { transform: rotate(360deg); } }
+@keyframes orbit-ccw { to { transform: rotate(-360deg); } }
+@keyframes pulse-dot { 0%, 100% { opacity: .28; transform: translateY(0); } 50% { opacity: .85; transform: translateY(-6px); } }
+@keyframes scan-line { 0%, 100% { transform: scaleX(.35); opacity: .35; } 50% { transform: scaleX(1); opacity: .9; } }
+@keyframes stage-pulse { 0%, 100% { opacity: .35; } 50% { opacity: 1; } }
+
+a:focus-visible, button:focus-visible { outline: 2px solid #9cb2ff; outline-offset: 4px; }
+section { scroll-margin-top: 5.5rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
