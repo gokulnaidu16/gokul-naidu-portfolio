@@ -28,6 +28,7 @@ export const projects: Project[] = [
     technologies: ["Python", "NLP", "Machine Learning", "Transformers", "BERT", "RoBERTa", "Speech Processing", "Computer Vision", "Generative AI"],
     variant: "flagship",
     featured: true,
+    githubUrl: "https://github.com/gokulnaidu16/Ai-Based-Mock-Interview-Platform",
   },
   {
     id: "kutira-kushala",
@@ -39,6 +40,7 @@ export const projects: Project[] = [
     technologies: ["AI Recommendations", "Intelligent Systems", "Firebase", "React"],
     variant: "standard",
     featured: true,
+    githubUrl: "https://github.com/gokulnaidu16/Kutira-Kushala",
   },
   {
     id: "health-data",
@@ -84,3 +86,4 @@ export const socialLinks: SocialLinks = {
 };
 
 export const resumeAvailable = false;
+
