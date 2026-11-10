@@ -72,9 +72,15 @@ export const experience: Experience[] = [
 
 export const education: Education[] = [
   {
-    degree: "B.E. in Information Science and Engineering",
-    institution: "S.J.C. Institute of Technology",
-    affiliation: "VTU",
+    degree: "MSc in Data Science & Artificial Intelligence",
+    institution: "Data ScienceTech Institute (DSTI)",
+    location: "Paris, France",
+    status: "Currently Pursuing",
+  },
+  {
+    degree: "Bachelor of Engineering (B.E.) in Information Science and Engineering",
+    institution: "SJC Institute of Technology, affiliated with VTU",
+    location: "Karnataka, India",
     cgpa: 8.47,
   },
 ];

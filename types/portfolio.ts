@@ -38,6 +38,8 @@ export type Education = {
   degree: string;
   institution: string;
   affiliation?: string;
+  location?: string;
+  status?: string;
   cgpa?: number;
   period?: string;
 };
